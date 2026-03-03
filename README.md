@@ -6,7 +6,7 @@ Urban waste management is a major environmental challenge. Improper segregation 
 ---
 
 ## 2. Problem Statement
-Waste in urban areas is often disposed of without proper segregation. Manual sorting is inefficient and error-prone. An automated smart system is required to improve efficiency and sustainability.
+In urban areas, waste is often disposed of without proper segregation. Manual sorting is inefficient and time-consuming. An automated smart system is required to improve efficiency and sustainability.
 
 ---
 
@@ -19,12 +19,12 @@ Waste in urban areas is often disposed of without proper segregation. Manual sor
 ---
 
 ## 4. System Working Overview
-The system will:
+The proposed system will:
 
 1. Detect user using proximity sensor  
 2. Open lid using servo motor  
-3. Detect waste using IR sensor  
-4. Classify wet/dry using rain sensor  
+3. Detect waste insertion using IR sensor  
+4. Classify wet/dry waste using rain sensor  
 5. Redirect waste using stepper motor  
 
 ---
@@ -57,12 +57,15 @@ The system will:
 
 ### ✅ Week 1 – Day 2
 - Servo motor successfully tested  
+- Servo rotates at 0°, 90°, and 180°  
 - Arduino servo control code implemented  
-- Servo rotates at 0°, 90°, 180°  
-- Documentation updated  
+
+- IR sensor integrated and tested  
+- Object detection working  
+- Serial monitor output verified  
 
 ---
 
 ## 8. Current Status
-Hardware testing phase in progress.  
-Next step: IR sensor integration.
+Basic hardware testing completed.  
+Next step: Rain sensor integration and waste classification logic.
