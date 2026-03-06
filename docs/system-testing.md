@@ -1,18 +1,13 @@
-# System Debugging
+# System Testing
 
 ## Objective
-To test and debug the integrated waste classification system.
+To test the complete system under different scenarios.
 
-## Testing Process
-1. Checked IR sensor detection.
-2. Verified servo motor lid operation.
-3. Tested rain sensor readings.
-4. Verified stepper motor rotation.
-
-## Observations
-- Sensors responding correctly.
-- Motors operating without delay.
-- Serial monitor displaying system status.
+## Test Cases
+1. Object detected by IR sensor.
+2. Wet waste detection using rain sensor.
+3. Dry waste detection using rain sensor.
+4. Waste redirection using stepper motor.
 
 ## Result
-System debugging completed successfully.
+The intelligent waste classification system successfully performed all test cases.
