@@ -1,71 +1,126 @@
-# Urban Waste Classification – IoT Based Intelligent System
+# Urban Waste Classification – Intelligent IoT Based System
 
-## 1. Introduction
-Urban waste management is a major environmental challenge. Improper segregation leads to pollution and inefficient recycling. This project aims to develop an IoT-based intelligent waste segregation system using Arduino and sensors.
+## Introduction
 
----
-
-## 2. Problem Statement
-In urban areas, waste is often disposed of without proper segregation. Manual sorting is inefficient and time-consuming. An automated smart system is required to improve efficiency and sustainability.
+Urban waste management is a major environmental challenge in modern cities. Improper waste segregation leads to inefficient recycling and environmental pollution.
+This project aims to develop an **IoT-based intelligent waste classification system** that automatically detects and separates waste using sensors and motor-driven mechanisms.
 
 ---
 
-## 3. Objectives
-- Automate wet and dry waste segregation
-- Reduce manual effort
-- Improve recycling efficiency
-- Develop a smart waste bin prototype
+## Problem Statement
+
+Manual waste segregation is inefficient and time-consuming. There is a need for an automated system that can identify different types of waste and direct them into appropriate compartments.
 
 ---
 
-## 4. System Working Overview
-The proposed system will:
+## Objectives
 
-1. Detect user using proximity sensor  
-2. Open lid using servo motor  
-3. Detect waste insertion using IR sensor  
-4. Classify wet/dry waste using rain sensor  
-5. Redirect waste using stepper motor  
-
----
-
-## 5. Hardware Components
-- Arduino Uno  
-- Rain Drop Sensor  
-- IR Sensor  
-- Proximity Sensor  
-- Servo Motor  
-- Stepper Motor  
-- Stepper Motor Driver  
+* Automate waste segregation using IoT sensors.
+* Detect waste insertion using proximity/IR sensors.
+* Identify wet and dry waste using a rain sensor.
+* Control lid opening using a servo motor.
+* Redirect waste using a stepper motor mechanism.
+* Build a smart and sustainable waste management prototype.
 
 ---
 
-## 6. Software Tools
-- Arduino IDE  
-- VS Code  
-- Git & GitHub  
+## Hardware Components
+
+* Arduino Uno
+* Servo Motor
+* IR Sensor
+* Rain Sensor
+* Stepper Motor
+* Stepper Motor Driver (ULN2003)
+* Jumper Wires
 
 ---
 
-## 7. Project Progress
+## Software Tools
 
-### ✅ Week 1 – Day 1
-- Repository created  
-- Folder structure setup  
-- Documentation completed  
-- Team roles defined  
-
-### ✅ Week 1 – Day 2
-- Servo motor successfully tested  
-- Servo rotates at 0°, 90°, and 180°  
-- Arduino servo control code implemented  
-
-- IR sensor integrated and tested  
-- Object detection working  
-- Serial monitor output verified  
+* Arduino IDE
+* VS Code
+* Git & GitHub
 
 ---
 
-## 8. Current Status
-Basic hardware testing completed.  
-Next step: Rain sensor integration and waste classification logic.
+## System Workflow
+
+1. User approaches the smart waste bin.
+2. IR sensor detects waste insertion.
+3. Servo motor opens the bin lid automatically.
+4. Rain sensor checks moisture level of waste.
+5. System determines whether the waste is **wet or dry**.
+6. Stepper motor rotates the compartment to direct waste to the correct section.
+
+---
+
+## Project Progress
+
+### Week 1 – Component Testing
+
+* Repository and folder structure created
+* Servo motor testing completed
+* IR sensor testing completed
+* Rain sensor testing completed
+* Stepper motor testing completed
+
+### Week 2 – System Integration
+
+* IR sensor integrated with servo motor
+* Rain sensor wet/dry detection logic implemented
+* Stepper motor direction control implemented
+* Sensor combination logic developed
+* Full system integration code created
+
+### Week 3 – Hardware Assembly
+
+* Final hardware assembly of components
+* Sensor placement and hardware layout design
+* Wiring verification and stability testing
+
+---
+
+## Team Members
+
+### Samarth Gupta – Project Leader & Hardware Integration
+
+Responsible for hardware assembly, wiring verification, and system architecture design.
+
+### Yash Kumar – Arduino Programming & System Integration
+
+Responsible for writing Arduino code, integrating sensors and motors, and developing system logic.
+
+### Prince Raikwar – Documentation & Backend Development
+
+Responsible for project documentation, report preparation, and backend/dashboard development.
+
+---
+
+## Current Status
+
+Hardware integration and system testing are in progress.
+Next phase includes system optimization and project demonstration.
+
+---
+
+## Repository Structure
+
+```
+Urban-Waste-Classification
+│
+├── docs
+├── hardware
+│   └── arduino
+├── backend
+├── frontend
+├── diagrams
+├── README.md
+└── TEAM-CONTRIBUTION.md
+```
+
+---
+
+## Conclusion
+
+This project demonstrates the use of IoT technology to create an intelligent waste management system that improves urban sustainability and promotes efficient recycling.
