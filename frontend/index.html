@@ -422,6 +422,7 @@
 
         let pollMs = 1000;
         let timer = null;
+        let lastServerEventTime = "";
 
         function nowText() {
             return new Date().toLocaleTimeString();
@@ -434,6 +435,41 @@
             el.events.prepend(item);
             while (el.events.children.length > 12) {
                 el.events.removeChild(el.events.lastChild);
+            }
+        }
+
+        function endpointFromData(pathname) {
+            try {
+                const base = new URL(el.apiUrl.value.trim());
+                base.pathname = pathname;
+                base.search = "";
+                return base.toString();
+            } catch (error) {
+                return "";
+            }
+        }
+
+        async function syncServerEvents() {
+            const eventsUrl = endpointFromData("/events");
+            if (!eventsUrl) {
+                return;
+            }
+
+            const response = await fetch(eventsUrl + "?limit=5", { cache: "no-store" });
+            if (!response.ok) {
+                return;
+            }
+
+            const payload = await response.json();
+            const list = Array.isArray(payload.events) ? payload.events : [];
+            if (list.length === 0) {
+                return;
+            }
+
+            const latest = list[0];
+            if (latest.time && latest.time !== lastServerEventTime) {
+                lastServerEventTime = latest.time;
+                addEvent(latest.message || "Backend event");
             }
         }
 
@@ -525,9 +561,15 @@
                 el.status.textContent = status;
                 el.waste.textContent = waste;
                 el.latency.textContent = latency + " ms";
-                el.lastSeen.textContent = nowText();
+                el.lastSeen.textContent = data.updated_at ? new Date(data.updated_at).toLocaleTimeString() : nowText();
 
-                updateCounters(status, waste);
+                if (data.stats) {
+                    el.detectCount.textContent = data.stats.detection_count ?? 0;
+                    el.wetCount.textContent = data.stats.wet_count ?? 0;
+                    el.dryCount.textContent = data.stats.dry_count ?? 0;
+                } else {
+                    updateCounters(status, waste);
+                }
                 updateWorkflow(status, waste);
 
                 const trendPoint = mapTrendValue(status, waste);
@@ -538,6 +580,7 @@
                 renderTrend();
 
                 setConnection(true);
+                await syncServerEvents();
 
                 const eventText = "Status: " + status + " | Waste: " + waste;
                 if (el.events.firstChild == null || !el.events.firstChild.textContent.includes(eventText)) {
