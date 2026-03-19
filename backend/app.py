@@ -5,7 +5,10 @@ import threading
 app = Flask(__name__)
 
 # Update COM port (IMPORTANT)
-ser = serial.Serial('COM3', 9600, timeout=1)
+try:
+    ser = serial.Serial('COM3', 9600, timeout=1)
+except Exception:
+    ser = None
 
 data = {
     "status": "Idle",
@@ -14,6 +17,8 @@ data = {
 
 def read_serial():
     global data
+    if ser is None:
+        return
     while True:
         try:
             line = ser.readline().decode().strip()
@@ -33,10 +38,11 @@ def read_serial():
         except:
             pass
 
-# Run serial reading in background
-thread = threading.Thread(target=read_serial)
-thread.daemon = True
-thread.start()
+# Run serial reading in background only when serial is available
+if ser is not None:
+    thread = threading.Thread(target=read_serial)
+    thread.daemon = True
+    thread.start()
 
 @app.route('/data')
 def get_data():
