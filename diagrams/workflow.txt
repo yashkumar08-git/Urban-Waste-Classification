@@ -1,0 +1,1 @@
+User → IR Sensor → Servo Motor → Rain Sensor → Waste Classification → Stepper Motor → Output

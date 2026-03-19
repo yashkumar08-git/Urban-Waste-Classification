@@ -1,0 +1,17 @@
+[User]
+   ↓
+[IR Sensor] → Detect Waste
+   ↓
+[Arduino Uno]
+   ↓
+[Rain Sensor] → Wet/Dry Decision
+   ↓
+[Servo Motor] → Open Lid
+   ↓
+[Stepper Motor] → Waste Direction
+   ↓
+[Serial Communication]
+   ↓
+[Flask Backend]
+   ↓
+[Frontend Dashboard]

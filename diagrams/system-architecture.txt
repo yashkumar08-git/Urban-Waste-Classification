@@ -1,0 +1,10 @@
+Arduino (Sensors + Motors)
+        │
+        ▼
+Serial Communication (USB)
+        │
+        ▼
+Flask Backend (Python API)
+        │
+        ▼
+Frontend Dashboard (HTML/JS)
