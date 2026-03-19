@@ -1,13 +1,25 @@
 # System Testing
 
 ## Objective
-To test the complete system under different scenarios.
+To test the complete system under real conditions.
 
 ## Test Cases
-1. Object detected by IR sensor.
-2. Wet waste detection using rain sensor.
-3. Dry waste detection using rain sensor.
-4. Waste redirection using stepper motor.
+
+### Test Case 1
+IR detects object → Servo opens lid  
+Result: Successful
+
+### Test Case 2
+Rain sensor detects wet waste  
+Result: Successful
+
+### Test Case 3
+Rain sensor detects dry waste  
+Result: Successful
+
+### Test Case 4
+Stepper motor directs waste  
+Result: Successful
 
 ## Result
-The intelligent waste classification system successfully performed all test cases.
+The system passed all test cases successfully.

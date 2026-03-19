@@ -9,4 +9,4 @@ To support combined testing of sensors and motors.
 - Rain sensor producing correct wet/dry readings.
 
 ## Result
-System ready for full software integration.
+System ready for full software integration
