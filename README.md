@@ -3,7 +3,7 @@
 ## Introduction
 
 Urban waste management is a major challenge in modern cities. Improper waste segregation leads to pollution and inefficient recycling.
-This project presents an **IoT-based intelligent waste classification system** that automatically detects and segregates waste into wet and dry categories using sensors and automated mechanisms.
+This project presents an **IoT-based intelligent waste classification system** that automatically detects and segregates waste into wet and dry categories using sensors, microcontrollers, and a real-time dashboard.
 
 ---
 
@@ -17,11 +17,11 @@ An automated smart system is required to improve waste management and sustainabi
 ## Objectives
 
 * Automate waste segregation using IoT sensors
-* Detect waste insertion using IR sensor
+* Detect waste using IR sensor
 * Identify wet and dry waste using rain sensor
-* Control lid using servo motor
+* Control bin lid using servo motor
 * Redirect waste using stepper motor
-* Build a smart and sustainable waste management system
+* Display real-time system data on dashboard
 
 ---
 
@@ -37,11 +37,20 @@ An automated smart system is required to improve waste management and sustainabi
 
 ---
 
-## Software Tools
+## Software & Technologies
 
 * Arduino IDE
-* VS Code
+* Python (Flask Backend)
+* HTML, CSS, JavaScript (Frontend Dashboard)
 * Git & GitHub
+
+---
+
+## System Architecture
+
+```id="l0z1j1"
+Arduino → Serial Communication → Flask Backend → REST API → Frontend Dashboard
+```
 
 ---
 
@@ -50,9 +59,22 @@ An automated smart system is required to improve waste management and sustainabi
 1. User approaches the smart waste bin
 2. IR sensor detects waste
 3. Servo motor opens lid automatically
-4. Rain sensor detects moisture
+4. Rain sensor detects moisture level
 5. System classifies waste as wet or dry
 6. Stepper motor directs waste into correct compartment
+7. Backend receives data from Arduino
+8. Frontend dashboard displays real-time system status
+
+---
+
+## Features
+
+* Real-time waste detection
+* Automatic classification (Wet/Dry)
+* Motor-based waste redirection
+* Live dashboard with system status
+* Event tracking and statistics
+* Backend API for data communication
 
 ---
 
@@ -60,27 +82,77 @@ An automated smart system is required to improve waste management and sustainabi
 
 ### Week 1 – Component Testing
 
-* Repository setup and folder structure created
-* Servo motor testing completed
-* IR sensor testing completed
-* Rain sensor testing completed
-* Stepper motor testing completed
+* Hardware components tested individually
+* Servo motor, IR sensor, rain sensor, stepper motor tested
+* Repository and folder structure created
 
 ### Week 2 – System Integration
 
-* IR sensor integrated with servo motor
-* Rain sensor wet/dry detection implemented
+* Sensors integrated with Arduino
+* Wet/dry detection logic implemented
 * Stepper motor direction control added
-* Sensor combination logic developed
-* Full system integration code completed
+* Full system logic developed
 
-### Week 3 – Final System & Documentation
+### Week 3 – Final System & Dashboard
 
-* Final hardware assembly completed
-* Sensor placement optimized
-* Wiring verification and debugging completed
-* System testing performed
-* Final documentation and report prepared
+* Complete hardware assembly
+* Backend developed using Flask
+* Real-time dashboard created
+* Arduino integrated with backend
+* System debugging and testing completed
+
+---
+
+## Project Structure
+
+```id="u08gbk"
+Urban-Waste-Classification
+│
+├── docs
+├── hardware
+│   └── arduino
+├── backend
+│   └── app.py
+├── frontend
+│   └── index.html
+├── diagrams
+├── requirements.txt
+├── README.md
+└── TEAM-CONTRIBUTION.md
+```
+
+---
+
+## How to Run the Project
+
+### 1. Upload Arduino Code
+
+* Connect Arduino to system
+* Upload the final Arduino program
+
+### 2. Run Backend
+
+```id="k2xxn1"
+cd backend
+python app.py
+```
+
+### 3. Run Frontend
+
+* Open `frontend/index.html` using Live Server
+
+### 4. View Dashboard
+
+```id="b4k2zn"
+http://127.0.0.1:5500
+```
+
+---
+
+## Current Status
+
+The system is fully functional with real-time data flow from Arduino to dashboard.
+The project is ready for demonstration and evaluation.
 
 ---
 
@@ -88,50 +160,27 @@ An automated smart system is required to improve waste management and sustainabi
 
 ### Samarth Gupta – Project Leader & Hardware Integration
 
-Responsible for hardware setup, wiring, assembly, and system architecture.
+Responsible for hardware setup, wiring, and system architecture.
 
-### Yash Kumar – Arduino Programming & System Integration
+### Yash Kumar – Arduino & Backend Development
 
-Responsible for coding, sensor integration, and system logic.
+Responsible for Arduino programming, backend development, and system integration.
 
-### Prince Raikwar – Documentation & Reporting
+### Prince Raikwar – Documentation & Frontend Development
 
-Responsible for project documentation, workflow explanation, and final reporting.
-
----
-
-## Current Status
-
-The intelligent waste classification system has been successfully developed and tested.
-The project is ready for demonstration.
-
----
-
-## Repository Structure
-
-Urban-Waste-Classification
-│
-├── docs
-├── hardware
-│   └── arduino
-├── backend
-├── frontend
-├── diagrams
-├── README.md
-└── TEAM-CONTRIBUTION.md
-```
+Responsible for documentation, system explanation, and dashboard UI.
 
 ---
 
 ## Conclusion
 
-This project demonstrates how IoT technology can be used to create a smart waste management system that improves efficiency, reduces manual effort, and promotes environmental sustainability.
+This project demonstrates how IoT technology can be used to build an intelligent waste management system that improves efficiency, reduces manual effort, and promotes environmental sustainability.
 
 ---
 
 ## Future Scope
 
-* Integration with mobile application
-* AI-based waste classification using image processing
-* Real-time monitoring dashboard
+* AI-based waste classification using camera
+* Mobile app integration
+* Cloud-based monitoring system
 * Smart city integration
