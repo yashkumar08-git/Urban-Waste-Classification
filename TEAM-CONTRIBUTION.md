@@ -13,7 +13,7 @@
 - Servo motor programming
 - IR sensor integration
 - Rain sensor wet/dry detection logic
-- Stepper motor control
+- Stepper motor control.
 
 
 ## Documentation & Backend Development
