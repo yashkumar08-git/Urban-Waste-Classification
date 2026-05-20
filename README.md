@@ -184,3 +184,8 @@ This project demonstrates how IoT technology can be used to build an intelligent
 * Mobile app integration
 * Cloud-based monitoring system
 * Smart city integration
+
+##Teammates
+
+<img width="1057" height="1409" alt="image" src="https://github.com/user-attachments/assets/4afa38d8-ca9e-4eae-b345-10ac7d63aaa3" />
+
